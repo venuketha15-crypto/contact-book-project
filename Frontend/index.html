@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style.css">
+        <title>Contact Book</title>
+    </head>
+    <body>
+        <div id = "container">
+            <h1>Contact Book</h1>
+            <p id = "subtitle">Manage Your Contacts Easily</p>
+            <p id="message"></p>
+            
+            <h2>🔍 Search Contacts</h2>
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name..." />
+            </div>
+
+            <form id = "contactForm">
+                <h2 id="formTitle">➕ Add New Contacts</h2>
+                <label for="nameInput">Name:</label>
+                <input type = "text" id = "nameInput" autocomplete="off" placeholder = " 👤 Enter the name" />
+                <label for = "phoneInput">Phone Number:</label>
+                <input type = "tel" id = "phoneInput" autocomplete="off" placeholder = "📞 Enter the phone number" />
+                <label for = "emailInput"> Email:</label>
+                <input type = "email" id = "emailInput" autocomplete="off" placeholder = "✉️ Enter the email" />
+                <label for = "categoryInput">Category:</label>
+                <select id = "categoryInput"> 
+                    <option value = "">🏷️ Select Category</option>
+                    <option value = "Family">Family</option>
+                    <option value = "Friends">Friends</option>
+                    <option value = "Work">Work</option>
+                    <option value = "Emergency">Emergency</option>
+                    <option value = "Others">Others</option>
+                </select>
+                <div class = "button-container">
+                    <button id = "addContactBtn" type = "submit">Add Contact</button>
+                </div>
+            </form> 
+            <div class="sort-container">
+                <label for="sortContacts">Sort By:</label>
+                <select id="sortContacts">
+                    <option value="">↕️ Select</option>
+                    <option value="az">A → Z</option>
+                    <option value="za">Z → A</option>
+                    <option value="favorites">Favorites First</option>
+                </select>
+            </div>
+
+            <div id = "stats">
+                <p id="totalContacts">Total Contacts : 0</p>
+                <p id="favoriteContacts">Favorite Contacts : 0</p>
+                <p id="familyContacts">Family Contacts : 0</p>
+                <p id="friendsContacts">Friends Contacts : 0</p>
+                <p id="workContacts">Work Contacts : 0</p>
+                <p id="emergencyContacts">Emergency Contacts : 0</p>
+                <p id = "othersContacts">Others Contacts : 0</p>
+            </div>  
+
+           <h2>📇 Contact List</h2>
+
+            <div id = "emptyState">
+                    <p>📭 No contacts yet</p>
+                    <p>Start by adding your first contact.</p>
+            </div>
+
+            <ul id = "contactList" ></ul>
+
+            <footer>📞 Contact Book • Built by Venu Ketha • © 2026</footer>
+
+        </div>
+
+    <script src="script.js"></script>    
+
+    </body>
+</html>
